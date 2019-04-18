@@ -41,7 +41,7 @@
             this.context = this.canvas.getContext("2d");
             document.body.insertBefore(this.canvas, document.body.childNodes[0]);
             this.frameNo = 0;
-            this.interval = setInterval(updateGameArea, 10);
+            this.interval = setInterval(updateGameArea, 8);
             var mouse = { x:0, y:0};
             this.canvas.addEventListener("mousedown", function(e){
                 mouse.x = e.pageX - this.offsetLeft;
@@ -56,8 +56,8 @@
     };
     function startGame() {
         connect();
-        myGamePiece = new component(100, 100, 100, 100, 0, "bug", 0);
-        myGameFood = new component(150, 100, 50, 50, "food", 0);
+        myGamePiece = new component(100, 100, 70, 70, 0, "bug", 0);
+        myGameFood = new component(150, 100, 30, 30, "food", 0);
         myGameArea.start();
     }
     function component(x, y, width, height, color, type, angle) {
